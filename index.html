@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Libary</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Add a book to the library</h1>
+        <form action="" id="bookForm">
+            <div class="input">
+                <label for="title">title *</label>
+                <input data-input type="text" id="title" name="title" placeholder="e.g. Harry Potter and the Philosopher’s Stone" required>
+            </div>
+            <div class="input">
+                <label for="author">author *</label>
+                <input data-input type="text" id="author" name="author" placeholder="e.g. J. K. Rowling" required>
+            </div>
+            <div class="input">
+                <label for="pages">number of pages *</label>
+                <input data-input type="number" id="pages" name="pages" placeholder="e.g. 223" pattern="[0-9]+" title="Please enter numerical values" required>
+            </div>
+            <div data-radio-div class="radio">
+                <p>Have you read this book? *</p>
+                <div>
+                    <input data-radio type="radio" id="yes" name="did-read" value="yes" required>
+                    <label for="yes">yes</label><br>
+                </div>
+                <div>
+                    <input data-radio type="radio" id="no" name="did-read" value="no" >
+                    <label for="css">not yet</label><br>
+                </div>
+            </div>
+            <input data-submit type="submit" value="Submit">
+        </form>
+        <p id="required">*Required</p>
+    </div>
+    <div class="container books">
+        <h1>Your Library</h1>
+        <div class="cards">
+        </div>
+    </div>
+</body>
+</html>

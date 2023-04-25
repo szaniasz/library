@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Roboto, Arial, sans-serif;
+    color: #232323;
+    background-color: #e7e4e1;
+}
+h1, h2 {
+    font-family: Cardo, Arial, serif;
+    overflow-wrap: break-word;
+}
+h1, p, h2, h3 {
+    cursor: default;
+    overflow-wrap: break-word;
+}
+
+h3 {
+    font-weight: 400;
+}
+p {
+    font-weight: 500;
+    color: #4b4b4b;
+}
+.container {
+    background-color: rgb(240, 238, 233);
+    border-radius: 20px;
+    margin: 0 auto;
+    width: 50vw;
+    display: grid;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 15px 17px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.container form > div {
+    display: flex;
+    flex-direction: column;
+}
+form {
+    margin-top: 20px;
+    display: grid;
+    gap: 15px;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 3px;
+    color: #4b4b4b;
+}
+
+input {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+.error input{
+    border: solid 1px firebrick;
+    margin-top: -1px;
+    margin-bottom: -1px;
+    padding-bottom: 13px;
+}
+
+.error:after {
+    content: 'This is required';
+    background-color: firebrick;
+    color: white;
+    padding: 8px 12px;
+    font-size: 12px;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+    top: -6px;
+    padding-top: 10px;
+}
+
+.radio.error {
+    border: solid firebrick 1px;
+    border-radius: 9px;
+}
+.radio.error:after {
+    top: 2px;
+}
+.error input:focus {
+    outline: none;
+    border: firebrick 1px solid;
+    margin-top: -1px;
+    margin-bottom: -1px;
+}
+input:focus {
+    outline: none;
+    border: blue 1px solid;
+    margin-top: -1px;
+    margin-bottom: -1px;
+}
+
+.radio {
+    display: grid;
+    gap: 6px;
+}
+input[type="submit"] {
+    margin: 0 auto;
+    cursor: pointer;
+    background-color: rgb(211, 209, 204);
+    color: #4b4b4b;
+    font-weight: 600;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 18px;
+    width: 5rem;
+    text-align: center;
+    position: relative;
+    top: 0;
+}
+input[type="radio"]:hover {
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    top: -2px;
+    transition: ease 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+input[type="submit"]:active {
+    top: 4px;
+    transition: ease 0.3s;
+    box-shadow: none;
+}
+#required {
+    position: relative;
+    text-align: end;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.container.books {
+    width: 50vw;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.container .cards {
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.container.books h1 {
+    text-align: center;
+    align-self: center;
+    margin-bottom: 30px;
+}
+
+.card {
+    padding: 20px 30px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    color: #232323;
+    min-height: 170px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    display: grid;
+    align-items: center;
+    position: relative;
+    transition:  ease 0.5s;
+    top: 0;
+
+}
+
+.card:hover  .deleteButton {
+    opacity: 1;
+    transition:  ease 0.9s;
+
+}
+.card:hover {
+    top: -5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 15px 20px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
+}
+.txt {
+    word-break: break-word;
+}
+.deleteButton {
+    cursor: pointer;
+    display: none;
+    position:absolute; 
+    top: 10px; 
+    right: 10px;
+    border-radius: 50%;
+    background-color: antiquewhite;
+    width: 30px;
+    height: 30px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    outline: none;
+    border: none;
+}
+
+.deleteButton:hover{
+    opacity: 0.7;
+    transition: 0.6s ease;
+}
+
+img {
+    height: 20px;
+}
+
+.card h2 {
+    word-break: break-word;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 20px;
+    border-bottom: #232323 solid 1px;
+    padding-bottom: 10px;
+}
+
+.readButton {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+}
+
+.didRead {
+    background-color: rgb(89, 217, 127);
+}
+
+.didRead:hover {
+    background-color: rgb(87, 190, 111);
+    transition: 0.3s ease;
+}
+
+.didntRead {
+    background-color: rgb(216, 106, 96);
+}
+
+.didntRead:hover {
+    background-color: rgb(189, 91, 82);
+    transition: 0.3s ease;
+
+}
+
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
