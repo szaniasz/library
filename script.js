@@ -54,7 +54,7 @@ function displayBooks(library) {
         deleteButton.setAttribute('onclick', 'deleteCard(this)')
         deleteButton.classList.add('deleteButton')
         const img = document.createElement('img')
-        img.src = "/delete_FILL0_wght400_GRAD0_opsz48.png"
+        img.src = "delete_FILL0_wght400_GRAD0_opsz48.png"
         deleteButton.appendChild(img)
         newCard.appendChild(deleteButton)
         const cardDiv = document.createElement('div')
