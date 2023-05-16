@@ -1,2 +1,2 @@
 # library
-Simple library made using OOP
+A simple library made using OOP
